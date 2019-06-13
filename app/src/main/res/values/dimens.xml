@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dim_140">140dp</dimen>
+    <dimen name="dim_100">100dp</dimen>
     <dimen name="dim_16">16dp</dimen>
+    <dimen name="dim_8">8dp</dimen>
 </resources>

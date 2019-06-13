@@ -3,12 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dim_140"
-    android:paddingBottom="@dimen/dim_16">
+    android:layout_height="@dimen/dim_100"
+    android:paddingTop="2dp"
+    android:paddingBottom="@dimen/dim_8">
     <ImageView
         android:id="@+id/place_image"
-        android:layout_width="@dimen/dim_140"
-        android:layout_height="@dimen/dim_140"
+        android:layout_width="@dimen/dim_100"
+        android:layout_height="@dimen/dim_100"
         />
 
     <LinearLayout
@@ -20,16 +21,18 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/place_image"
         android:orientation="vertical"
-        android:paddingLeft="8dp">
+        android:paddingLeft="@dimen/dim_8">
         <TextView
             android:id="@+id/name_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/AppTextViewTheme"
             />
         <TextView
             android:id="@+id/creationdate_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/AppTextViewTheme"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,6 +43,7 @@
                 android:id="@+id/address_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/AppTextViewTheme"
                 />
         </LinearLayout>
 
@@ -51,12 +55,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/AppTextViewTheme"
                 tools:text="@string/open_date"/>
             <TextView
                 android:id="@+id/opendays_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="one"/>
+                style="@style/AppTextViewTheme"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,11 +72,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/AppTextViewTheme"
                 tools:text="@string/open_hours"/>
             <TextView
                 android:id="@+id/openhours_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/AppTextViewTheme"
                 tools:text="one"/>
         </LinearLayout>
 
@@ -83,10 +90,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/AppTextViewTheme"
                 tools:text="@string/manager"/>
             <TextView
                 android:id="@+id/manager_name_text_view"
                 android:layout_width="match_parent"
+                style="@style/AppTextViewTheme"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
@@ -98,15 +107,24 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/AppTextViewTheme"
                 tools:text="@string/vice_manager"/>
             <TextView
                 android:id="@+id/vicemanager_name_text_view"
                 android:layout_width="match_parent"
+                style="@style/AppTextViewTheme"
                 android:layout_height="wrap_content"
                 tools:text="one"/>
         </LinearLayout>
-
     </LinearLayout>
+    <ImageButton
+        android:id="@+id/more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:src="@drawable/baseline_more_vert_white_24"/>
 
 
 </RelativeLayout>

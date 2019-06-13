@@ -5,8 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,7 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
 
     @Override
     public void onBindViewHolder(PlaceViewHolder placeViewHolder, int i) {
-        PlaceOrEvent placesOrEvent = placesorEvents.get(i);
+        final PlaceOrEvent placesOrEvent = placesorEvents.get(i);
 
         ImageView imageView = placeViewHolder.imageView;
         if (placesOrEvent.getPlaceImageResourceId() > 0) {
@@ -56,10 +58,11 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
         placeNameTextView.setText(placesOrEvent.getName());
 
         TextView addressTextView = placeViewHolder.addressTextView;
-        addressTextView.setText(placesOrEvent.getAddress());
+        addressTextView.setText(String.format("Address: %s",placesOrEvent.getAddress()));
 
         TextView creationDateTextView = placeViewHolder.creationDateTextView;
-        creationDateTextView.setText(placesOrEvent.getCreationDate().toString());
+        creationDateTextView.setText(String.format("Creation date: %s/%s/%s",placesOrEvent.getCreationDate().getYear(), placesOrEvent.getCreationDate().getMonth(),
+                placesOrEvent.getCreationDate().getDay()));
 
         TextView openDateTextView = placeViewHolder.openDateTextView;
         if (placesOrEvent.getOpenDays() != null){
@@ -75,6 +78,18 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
 
         TextView viceManagerTextView = placeViewHolder.viceManageNameTextView;
         viceManagerTextView.setText(placesOrEvent.getViceManagerName());
+
+        ImageButton moreInfoButton = placeViewHolder.moreButton;
+
+        moreInfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(v.getContext(),
+                        String.format("%s  %s", "You clicked on ", placesOrEvent.getName()),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -92,6 +107,7 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
         public TextView openHoursTextView;
         public TextView manageNameTextView;
         public TextView viceManageNameTextView;
+        public ImageButton moreButton;
 
         public PlaceViewHolder(View itemView){
             super(itemView);
@@ -104,6 +120,7 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
             openHoursTextView = itemView.findViewById(R.id.openhours_text_view);
             manageNameTextView = itemView.findViewById(R.id.manager_name_text_view);
             viceManageNameTextView = itemView.findViewById(R.id.vicemanager_name_text_view);
+            moreButton = itemView.findViewById(R.id.more_button);
         }
     }
 

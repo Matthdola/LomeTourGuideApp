@@ -2,7 +2,6 @@ package com.example.dola.lometourguideapp;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class PlaceOrEvent {
     private String name;
@@ -121,13 +120,13 @@ public class PlaceOrEvent {
                 new Date(1998, 02, 12), R.drawable.esa));
 
         listPlaces.add(new PlaceOrEvent("Chez Brovi", "Nukafu",
-                new Date(1998, 02, 12), R.drawable.lbs));
+                new Date(1998, 02, 12), R.drawable.cheb_brovi));
 
         listPlaces.add(new PlaceOrEvent("La Cascade ", "Nukafu",
-                new Date(1998, 02, 12), R.drawable.lbs));
+                new Date(1998, 02, 12), R.drawable.lacascade));
 
         listPlaces.add(new PlaceOrEvent("Green Field ", "Tokoin",
-                new Date(1998, 02, 12), R.drawable.lbs));
+                new Date(1998, 02, 12), R.drawable.greenfield));
         return listPlaces;
     }
 

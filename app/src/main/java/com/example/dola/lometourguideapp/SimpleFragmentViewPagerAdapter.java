@@ -12,7 +12,13 @@ public class SimpleFragmentViewPagerAdapter extends FragmentPagerAdapter {
     public static final int ATTRACTION_PARC = 3;
     public static final int NIGHT_CLUB = 4;
 
-    private String tabTitles[] = new String[] {"Restaurants", "Public place", "universities", "Parc", "Night club"};
+    private String tabTitles[] = new String[] {
+            "Restaurants",
+            "Public place",
+            "universities",
+            "Parc",
+            "Night club",
+    };
 
     public SimpleFragmentViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -45,7 +51,6 @@ public class SimpleFragmentViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-
         return tabTitles[position];
     }
 }
