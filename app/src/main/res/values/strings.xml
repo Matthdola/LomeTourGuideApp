@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_date">Open date</string>
+    <string name="open_hours">Open Hours</string>
+    <string name="manager">Manager</string>
+    <string name="vice_manager">Vice Manager</string>
 </resources>

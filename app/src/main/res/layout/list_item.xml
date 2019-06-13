@@ -3,49 +3,44 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dim_140">
+    android:layout_height="@dimen/dim_140"
+    android:paddingBottom="@dimen/dim_16">
     <ImageView
         android:id="@+id/place_image"
         android:layout_width="@dimen/dim_140"
-        android:layout_height="@dimen/dim_140"/>
+        android:layout_height="@dimen/dim_140"
+        />
 
     <LinearLayout
         android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="@dimen/dim_140"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/place_image"
         android:orientation="vertical"
-        android:padding="@dimen/dim_16">
+        android:paddingLeft="8dp">
         <TextView
             android:id="@+id/name_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="deka"/>
+            />
         <TextView
             android:id="@+id/creationdate_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="deka"/>
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
-            <!--
-            <ImageView
-                android:id="@+id/address_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_background"/>
-            -->
             <TextView
                 android:id="@+id/address_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="one"/>
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -56,7 +51,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Open date"/>
+                tools:text="@string/open_date"/>
             <TextView
                 android:id="@+id/opendays_text_view"
                 android:layout_width="match_parent"
@@ -72,7 +67,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Open Hours"/>
+                tools:text="@string/open_hours"/>
             <TextView
                 android:id="@+id/openhours_text_view"
                 android:layout_width="match_parent"
@@ -88,12 +83,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Manager "/>
+                tools:text="@string/manager"/>
             <TextView
                 android:id="@+id/manager_name_text_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="one"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
         <LinearLayout
@@ -104,7 +98,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Vice Manager "/>
+                tools:text="@string/vice_manager"/>
             <TextView
                 android:id="@+id/vicemanager_name_text_view"
                 android:layout_width="match_parent"
