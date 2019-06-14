@@ -11,17 +11,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class PrivateUniversitiesFragment extends Fragment {
+    RecyclerView recyclerView;
+    Context context;
 
     public PrivateUniversitiesFragment() {
         // Required empty public constructor
     }
-
-    RecyclerView recyclerView;
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,7 +30,8 @@ public class PrivateUniversitiesFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_places, container, false);
 
         // Create an array of universities
-        final ArrayList<PlaceOrEvent> listPlaces = PlaceOrEvent.createListOfUniversities();
+        context = rootView.getContext();
+        final ArrayList<PlaceOrEvent> listPlaces = createListOfUniversities();
 
         // Create an PlaceAdapter, whose data source is list of Word. The
         // adapter knows how to create list items for each item in the list.
@@ -53,6 +53,27 @@ public class PrivateUniversitiesFragment extends Fragment {
         recyclerView.setAdapter(itemsAdapter);
 
         return rootView;
+    }
+
+    public ArrayList<PlaceOrEvent> createListOfUniversities(){
+        ArrayList<PlaceOrEvent> listPlaces = new ArrayList<>();
+
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.ucao),context.getString(R.string.ucao_address),
+                new Date(1998, 02, 12), R.drawable.ucao));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.defi),context.getString(R.string.defi_address),
+                new Date(1998, 02, 12), R.drawable.defithec));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.esiba),context.getString(R.string.esiba_address),
+                new Date(1998, 02, 12), R.drawable.esiba));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.esgis),context.getString(R.string.esgis_address),
+                new Date(1998, 02, 12), R.drawable.esgis));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.ipnets),context.getString(R.string.ipnets_address),
+                new Date(1998, 02, 12), R.drawable.ipnetexperts));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.esa),context.getString(R.string.esa_address),
+                new Date(1998, 02, 12), R.drawable.esa));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.lbs),context.getString(R.string.lbs_address),
+                new Date(1998, 02, 12), R.drawable.lbs));
+
+        return listPlaces;
     }
 
 }

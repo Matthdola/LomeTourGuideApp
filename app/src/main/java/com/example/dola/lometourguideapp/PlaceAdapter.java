@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import com.example.dola.lometourguideapp.R;
 
 public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder>  {
 
@@ -42,8 +43,9 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
     }
 
     @Override
-    public void onBindViewHolder(PlaceViewHolder placeViewHolder, int i) {
+    public void onBindViewHolder(final PlaceViewHolder placeViewHolder, int i) {
         final PlaceOrEvent placesOrEvent = placesorEvents.get(i);
+
 
         ImageView imageView = placeViewHolder.imageView;
         if (placesOrEvent.getPlaceImageResourceId() > 0) {
@@ -58,10 +60,15 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
         placeNameTextView.setText(placesOrEvent.getName());
 
         TextView addressTextView = placeViewHolder.addressTextView;
-        addressTextView.setText(String.format("Address: %s",placesOrEvent.getAddress()));
+        addressTextView.setText(String.format("%s %s",
+                placeViewHolder.context.getString(R.string.address ),
+                placesOrEvent.getAddress()));
 
         TextView creationDateTextView = placeViewHolder.creationDateTextView;
-        creationDateTextView.setText(String.format("Creation date: %s/%s/%s",placesOrEvent.getCreationDate().getYear(), placesOrEvent.getCreationDate().getMonth(),
+        creationDateTextView.setText(String.format("%s %s/%s/%s",
+                placeViewHolder.context.getString(R.string.creation_date),
+                placesOrEvent.getCreationDate().getYear(),
+                placesOrEvent.getCreationDate().getMonth(),
                 placesOrEvent.getCreationDate().getDay()));
 
         TextView openDateTextView = placeViewHolder.openDateTextView;
@@ -86,7 +93,9 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
             public void onClick(View v) {
 
                 Toast.makeText(v.getContext(),
-                        String.format("%s  %s", "You clicked on ", placesOrEvent.getName()),
+                        String.format("%s  %s",
+                                placeViewHolder.context.getString(R.string.moreinfotext),
+                                placesOrEvent.getName()),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -108,10 +117,11 @@ public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHo
         public TextView manageNameTextView;
         public TextView viceManageNameTextView;
         public ImageButton moreButton;
+        public Context context;
 
         public PlaceViewHolder(View itemView){
             super(itemView);
-
+            context = itemView.getContext();
             imageView = itemView.findViewById(R.id.place_image);
             placeNameTextView = itemView.findViewById(R.id.name_text_view);
             addressTextView = itemView.findViewById(R.id.address_text_view);

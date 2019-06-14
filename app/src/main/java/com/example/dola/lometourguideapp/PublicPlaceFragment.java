@@ -1,6 +1,7 @@
 package com.example.dola.lometourguideapp;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,10 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class PublicPlaceFragment extends Fragment {
     RecyclerView recyclerView;
+    Context context;
 
     public PublicPlaceFragment() {
         // Required empty public constructor
@@ -27,7 +30,8 @@ public class PublicPlaceFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_places, container, false);
 
         // Create an array of universities
-        final ArrayList<PlaceOrEvent> listPlaces = PlaceOrEvent.createListOfPublicPlaces();
+        context = rootView.getContext();
+        final ArrayList<PlaceOrEvent> listPlaces = createListOfPublicPlaces();
 
         // Create an PlaceAdapter, whose data source is list of Word. The
         // adapter knows how to create list items for each item in the list.
@@ -51,4 +55,24 @@ public class PublicPlaceFragment extends Fragment {
         return rootView;
     }
 
+    public ArrayList<PlaceOrEvent> createListOfPublicPlaces(){
+        ArrayList<PlaceOrEvent> listPlaces = new ArrayList<>();
+
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.place_independance),context.getString(R.string.place_independance_address),
+                new Date(1998, 02, 12), R.drawable.place_indep));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.coursdappel),context.getString(R.string.coursdappel_address),
+                new Date(1998, 02, 12), R.drawable.cours_appel));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.assemble_nat),context.getString(R.string.assemble_nat_address),
+                new Date(1998, 02, 12), R.drawable.assemble_nationale));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.place_anani_santos),context.getString(R.string.place_anani_santos_address),
+                new Date(1998, 02, 12), R.drawable.anani_santos));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.place_liberation),context.getString(R.string.place_liberation_address),
+                new Date(1998, 02, 12), R.drawable.colombe_de_la_paix));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.agoe_deux_lions),context.getString(R.string.agoe_deux_lions_address),
+                new Date(1998, 02, 12), R.drawable.agoe_deux_lions));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.gta),context.getString(R.string.gta_address),
+                new Date(1998, 02, 12), R.drawable.gta));
+
+        return listPlaces;
+    }
 }

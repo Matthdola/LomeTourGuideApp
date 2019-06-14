@@ -1,6 +1,7 @@
 package com.example.dola.lometourguideapp;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,15 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CenterOfAttractionFragment extends Fragment {
-    public CenterOfAttractionFragment() {
-        // Required empty public constructor
-    }
-
     RecyclerView recyclerView;
+    Context context;
 
+    public CenterOfAttractionFragment() {
 
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +29,8 @@ public class CenterOfAttractionFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_places, container, false);
 
         // Create an array of universities
-        final ArrayList<PlaceOrEvent> listPlaces = PlaceOrEvent.createListOfCenterOfAttraction();
+        context = rootView.getContext();
+        final ArrayList<PlaceOrEvent> listPlaces = createListOfCenterOfAttraction();
 
         // Create an PlaceAdapter, whose data source is list of Word. The
         // adapter knows how to create list items for each item in the list.
@@ -52,4 +54,22 @@ public class CenterOfAttractionFragment extends Fragment {
         return rootView;
     }
 
+    public ArrayList<PlaceOrEvent> createListOfCenterOfAttraction(){
+        ArrayList<PlaceOrEvent> listPlaces = new ArrayList<>();
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.eden_garden),context.getString(R.string.eden_garden_address),
+                new Date(1998, 02, 12), R.drawable.eden_garden));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.filoparc),context.getString(R.string.filoparc_address),
+                new Date(1998, 02, 12), R.drawable.fil_o_parc));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.tata_parc),context.getString(R.string.tata_parc_address),
+                new Date(1998, 02, 12), R.drawable.tata_parc));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.togo_2000),context.getString(R.string.togo_2000_address),
+                new Date(1998, 02, 12), R.drawable.togo_2000));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.marcelo_beach),context.getString(R.string.marcelo_beach_address),
+                new Date(1998, 02, 12), R.drawable.marcelo_beach));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.pure_plage),context.getString(R.string.pure_plage_address),
+                new Date(1998, 02, 12), R.drawable.pure_plage));
+        listPlaces.add(new PlaceOrEvent(context.getString(R.string.olodge),context.getString(R.string.olodge_address),
+                new Date(1998, 02, 12), R.drawable.ologde));
+        return listPlaces;
+    }
 }

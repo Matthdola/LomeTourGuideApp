@@ -5,19 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class SimpleFragmentViewPagerAdapter extends FragmentPagerAdapter {
-    public static final int PAGE_COUNT = 5;
-    public static final int RESTAURANTS = 0;
-    public static final int PUBLIC_PLACE = 1;
-    public static final int UNIVERSITIES = 2;
-    public static final int ATTRACTION_PARC = 3;
-    public static final int NIGHT_CLUB = 4;
-
-    private String tabTitles[] = new String[] {
-            "Restaurants",
-            "Public place",
-            "universities",
-            "Parc",
-            "Night club",
+    public String tabTitles[] = new String[] {
+        "Restaurants",
+        "Public places",
+        "Universities",
+        "Parcs",
+        "Night clubs"
     };
 
     public SimpleFragmentViewPagerAdapter(FragmentManager fm) {
@@ -27,16 +20,16 @@ public class SimpleFragmentViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int i) {
 
-        if (i == RESTAURANTS){
+        if (i == MainActivity.RESTAURANTS){
             return new RestaurantsFragment();
 
-        } else if(i == PUBLIC_PLACE){
+        } else if(i == MainActivity.PUBLIC_PLACE){
             return new PublicPlaceFragment();
 
-        } else if(i == UNIVERSITIES){
+        } else if(i == MainActivity.UNIVERSITIES){
             return new PrivateUniversitiesFragment();
 
-        } else if(i == ATTRACTION_PARC){
+        } else if(i == MainActivity.ATTRACTION_PARC){
             return new CenterOfAttractionFragment();
 
         }else {
@@ -46,7 +39,7 @@ public class SimpleFragmentViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return MainActivity.PAGE_COUNT;
     }
 
     @Override

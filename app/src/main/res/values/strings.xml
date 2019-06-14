@@ -8,4 +8,110 @@
     <string name="vice_manager">Vice Manager</string>
 
     <string name="moreinfotext">You clicked on </string>
+
+    <!-- List of restaurants -->
+    <string name="passio">EL PASSIO</string>
+    <string name="address_passio">Residence Caisse </string>
+    <string name="chezconstant">CHEZ CONSTANT </string>
+    <string name="address_constant">Hedzranawoe-Novissi </string>
+    <string name="cote_sud">RESTAURANT COTE SUD </string>
+    <string name="cote_sud_address">Be sur le boulevard </string>
+    <string name="cote_jardin">COTE JARDIN </string>
+    <string name="cote_jardin_address">BAGUIDA </string>
+    <string name="la_part_boucher">LA PART DU BOUCHER </string>
+    <string name="la_part_boucher_address">Be KPOTA </string>
+    <string name="beluga">RESTAURANT BELUGA </string>
+    <string name="beluga_address">Nyekonakpoe </string>
+    <string name="chez_brovi">CHEZ BROVI </string>
+    <string name="chez_brovi_address">Quartier Administratif </string>
+    <string name="la_cascade">LA CASCADE </string>
+    <string name="la_cascade_address">Lomé Justice </string>
+    <string name="green_field">GREEN FIELD </string>
+    <string name="green_field_address">Tokoin Hopital </string>
+
+
+    <!-- List of public places -->
+    <string name="place_independance">PLACE DE L\'INDEPENDANCE </string>
+    <string name="place_independance_address">Palais des congrès </string>
+    <string name="coursdappel">Cours d\'appel</string>
+    <string name="coursdappel_address">Agoe Anome </string>
+
+    <string name="assemble_nat">Assemblée Nationale </string>
+    <string name="assemble_nat_address">Be Massouhoin</string>
+
+    <string name="place_anani_santos">Plase Anani Santos</string>
+    <string name="place_anani_santos_address">Kodjoviakope </string>
+
+    <string name="place_liberation">Place de la libération </string>
+    <string name="place_liberation_address">Totsi Cacaveli </string>
+
+    <string name="agoe_deux_lions">Agoè 2 LION</string>
+    <string name="agoe_deux_lions_address">Agoe Anome </string>
+
+    <string name="gta">GTA </string>
+    <string name="gta_address">Be Massouhoin </string>
+
+
+    <!-- List of attraction centers -->
+
+
+    <string name="eden_garden">EDEN GARDEN</string>
+    <string name="eden_garden_address">Avedji, a coté de CECO </string>
+    <string name="filoparc">FIL O PARC</string>
+    <string name="filoparc_address">Agoe Atsanve </string>
+    <string name="tata_parc">Tata Parc </string>
+    <string name="tata_parc_address">Togo 2000 Attiegou</string>
+    <string name="togo_2000">Togo 2000</string>
+    <string name="togo_2000_address">Attiegou </string>
+    <string name="marcelo_beach">Marcelo beach </string>
+    <string name="marcelo_beach_address">Baguida </string>
+    <string name="pure_plage">Pure plage</string>
+    <string name="pure_plage_address">Baguida </string>
+    <string name="olodge">Olodge </string>
+    <string name="olodge_address">Avepozo </string>
+
+
+    <!-- List of night club -->
+
+    <string name="miami">MIAMI 228 </string>
+    <string name="miami_address">Avedji limousine </string>
+    <string name="la_villa">LA VILLA</string>
+    <string name="la_villa_address">Nyekonakpoe </string>
+    <string name="privilege">PRIVILEGE </string>
+    <string name="privilege_address">Lome, palm beach</string>
+    <string name="seven_clash">SEVEN CLASH</string>
+    <string name="seven_clash_address">Dekon, boulevard </string>
+    <string name="club_901">CLUB 901 </string>
+    <string name="club_901_address">Tokoin </string>
+    <string name="montecristo">MONTECRISTO</string>
+    <string name="montecristo_address">Dekon, Assigame </string>
+    <string name="refuge">LE REFUGE </string>
+    <string name="refuge_address">TOKOIN WUITI </string>
+
+    <!-- List of private universities -->
+
+    <string name="ucao">UCAO UUT </string>
+    <string name="ucao_address">Zanguera </string>
+    <string name="defi">DEFITECH</string>
+    <string name="defi_address">Hedzranawoe AWOUDJA </string>
+    <string name="esiba">ESIBA </string>
+    <string name="esiba_address">Agoe Avedji</string>
+    <string name="esgis">ESGIS </string>
+    <string name="esgis_address">Kodjoviakope, Agoe, Avedji, Be Rue de l\'OCAM </string>
+    <string name="ipnets">IPNETS EXPERTS </string>
+    <string name="ipnets_address">Totsi cacaveli </string>
+    <string name="esa">ESA</string>
+    <string name="esa_address">Agoe Minamadou, Nukafu</string>
+    <string name="lbs">LBS </string>
+    <string name="lbs_address">TOKOIN WUITI </string>
+
+
+    <string name="resto">Restaurants</string>
+    <string name="place_public">Public places</string>
+    <string name="universities">Universities</string>
+    <string name="parcs">Parcs</string>
+    <string name="nightclubs">Night clubs</string>
+
+    <string name="address">Address: </string>
+    <string name="creation_date">Creation date: </string>
 </resources>
