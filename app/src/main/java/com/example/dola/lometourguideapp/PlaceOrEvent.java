@@ -1,11 +1,6 @@
 package com.example.dola.lometourguideapp;
 
-import android.content.Context;
-
-import java.util.ArrayList;
 import java.util.Date;
-
-import com.example.dola.lometourguideapp.R;
 
 public class PlaceOrEvent {
     private String name;

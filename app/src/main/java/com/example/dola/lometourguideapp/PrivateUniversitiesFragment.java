@@ -1,7 +1,5 @@
 package com.example.dola.lometourguideapp;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +14,6 @@ import java.util.Date;
 
 public class PrivateUniversitiesFragment extends Fragment {
     RecyclerView recyclerView;
-    Context context;
 
     public PrivateUniversitiesFragment() {
         // Required empty public constructor
@@ -25,12 +22,10 @@ public class PrivateUniversitiesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.activity_places, container, false);
 
         // Create an array of universities
-        context = rootView.getContext();
         final ArrayList<PlaceOrEvent> listPlaces = createListOfUniversities();
 
         // Create an PlaceAdapter, whose data source is list of Word. The
@@ -58,19 +53,19 @@ public class PrivateUniversitiesFragment extends Fragment {
     public ArrayList<PlaceOrEvent> createListOfUniversities(){
         ArrayList<PlaceOrEvent> listPlaces = new ArrayList<>();
 
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.ucao),context.getString(R.string.ucao_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.ucao),getString(R.string.ucao_address),
                 new Date(1998, 02, 12), R.drawable.ucao));
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.defi),context.getString(R.string.defi_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.defi),getString(R.string.defi_address),
                 new Date(1998, 02, 12), R.drawable.defithec));
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.esiba),context.getString(R.string.esiba_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.esiba),getString(R.string.esiba_address),
                 new Date(1998, 02, 12), R.drawable.esiba));
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.esgis),context.getString(R.string.esgis_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.esgis),getString(R.string.esgis_address),
                 new Date(1998, 02, 12), R.drawable.esgis));
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.ipnets),context.getString(R.string.ipnets_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.ipnets),getString(R.string.ipnets_address),
                 new Date(1998, 02, 12), R.drawable.ipnetexperts));
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.esa),context.getString(R.string.esa_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.esa),getString(R.string.esa_address),
                 new Date(1998, 02, 12), R.drawable.esa));
-        listPlaces.add(new PlaceOrEvent(context.getString(R.string.lbs),context.getString(R.string.lbs_address),
+        listPlaces.add(new PlaceOrEvent(getString(R.string.lbs),getString(R.string.lbs_address),
                 new Date(1998, 02, 12), R.drawable.lbs));
 
         return listPlaces;

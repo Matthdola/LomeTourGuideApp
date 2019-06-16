@@ -1,20 +1,26 @@
 package com.example.dola.lometourguideapp;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class SimpleFragmentViewPagerAdapter extends FragmentPagerAdapter {
-    public String tabTitles[] = new String[] {
-        "Restaurants",
-        "Public places",
-        "Universities",
-        "Parcs",
-        "Night clubs"
-    };
 
-    public SimpleFragmentViewPagerAdapter(FragmentManager fm) {
+    String tabTitles[] ;
+
+    Context context;
+
+    public SimpleFragmentViewPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
+        this.context = context;
+       tabTitles = new String[] {
+            context.getString(R.string.resto),
+            context.getString(R.string.place_public),
+            context.getString(R.string.universities),
+            context.getString(R.string.parcs),
+            context.getString(R.string.nightclubs)
+        };
     }
 
     @Override

@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import com.example.dola.lometourguideapp.R;
 
 public class PlaceAdapter  extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder>  {
 
